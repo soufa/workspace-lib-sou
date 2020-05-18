@@ -1,0 +1,16 @@
+<div style="height: 50vh;">
+<!--  <label for="models">Choose a feature: </label>-->
+  <p-dropdown
+    #featureInput="ngModel"
+    [options]="models$ | async"
+    optionLabel="name"
+    [(ngModel)]="selectedFeature"
+    (onChange)="selectFeature()"
+    filter="true"
+    filterPlaceholder="Search feature"
+    placeholder="Select a feature"
+    required="true"
+  >
+  </p-dropdown>
+  <sc-feature-updator #featureUpdator></sc-feature-updator>
+</div>

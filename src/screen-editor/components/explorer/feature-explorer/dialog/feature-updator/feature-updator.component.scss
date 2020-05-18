@@ -1,0 +1,147 @@
+.title {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+:host ::ng-deep {
+  .apply-button .ui-button,
+  .apply-button .ui-button:hover {
+    background: #eeeeee;
+    color: #5cb85c;
+    float: right;
+    height: 35px;
+  }
+
+  .apply-button {
+    float: right;
+    margin-top: 20px;
+  }
+
+  .delete-button .ui-button,
+  .delete-button .ui-button:hover {
+    background: transparent;
+    color: #d84315;
+  }
+  .ui-button:enabled:focus {
+    box-shadow: none;
+  }
+  .ui-table {
+    .edit-cell-icon {
+      font-size: 14px;
+    }
+    .ui-widget-header {
+      background-color: transparent;
+      width: 100%;
+    }
+    .ui-table-thead > tr > th {
+      padding: 5px;
+      border: 1px solid #c8c8c8;
+      font-weight: 700;
+      color: #333333;
+      background-color: #f4f4f4;
+      border-bottom: none;
+      font-size: 14px;
+    }
+    .ui-table-tbody {
+      > tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      > tr > td {
+        background-color: inherit;
+        border: 1px solid #c8c8c8;
+        padding: 2px 5px;
+      }
+    }
+  }
+
+  .templates-group {
+    display: inline-block;
+    margin-bottom: 5px;
+    .ui-g-3 {
+      padding: 3px;
+    }
+    .ui-button {
+      color: #d83431;
+      background: #eeeeee;
+      width: 175px;
+      height: 30px;
+    }
+
+    .ui-button:hover {
+      background-color: #e0e0e0;
+      color: #dc3545;
+      width: 175px;
+    }
+  }
+
+  .ui-widget-header {
+    background: #ececec 0 0 repeat-x;
+  }
+
+  .ui-editable-column .invalid-screen-name {
+    background: palevioletred;
+    border: 0px;
+  }
+
+  .ui-table .ui-table-data > tr > td.ui-editable-column.invalid-screen-name {
+    background: palevioletred;
+  }
+
+  .filter-input.ui-inputgroup .ui-inputtext,
+  .filter-input.ui-inputgroup .ui-inputgroup-addon {
+    border: none;
+    border-bottom: solid 2px #8d9293;
+    border-radius: 0;
+    padding: 0;
+    height: 25px;
+    color: #313439;
+    font-size: 14px;
+    background: none;
+  }
+
+  .filter-input.ui-inputgroup .ui-inputtext:focus {
+    box-shadow: none;
+  }
+
+  .actions .ui-button {
+    border: none;
+    border-radius: 0;
+    height: 25px;
+    width: 25px;
+    margin-right: 0;
+    margin-left: 2px;
+  }
+
+  .actions .add-Feature .ui-button,
+  .actions .add-Feature .ui-button {
+    color: #d83431;
+    background: transparent;
+  }
+
+  .actions .save-button .ui-button {
+    color: #4caf50;
+    background: transparent;
+  }
+}
+
+.actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions {
+  display: inline-flex;
+}
+
+.filter-input {
+  padding-right: 5px;
+}
+
+.filter-input input {
+  width: 100%;
+}
+
+.ui-inputgroup {
+  width: 100%;
+}

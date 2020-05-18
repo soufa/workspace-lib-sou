@@ -1,0 +1,16 @@
+<div class="screens-store" *ngIf="(screens$ | async) as screensItems">
+  <p-listbox *ngIf="screensItems.length >0" [options]="screensItems" filter="true" [(ngModel)]="selectedScreen"
+    [listStyle]="{'max-height':'100%'}">
+    <ng-template let-screen pTemplate="item">
+      <div class="screen-item" pDraggable (onDragStart)="startDragScreen(screen.value,$event)">
+        <i class="fa fa-desktop"></i> <span>{{ screen.label }}</span>
+        <span class="feature-name">({{ screen.value.featureName }} - {{screen.value.name}})</span>
+      </div>
+    </ng-template>
+  </p-listbox>
+  <div class="no-element" *ngIf="(screensItems.length === 0)">
+    <span class="no-element-msg">
+      No screens configured
+    </span>
+  </div>
+</div>

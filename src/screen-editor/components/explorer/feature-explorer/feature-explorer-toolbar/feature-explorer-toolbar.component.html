@@ -1,0 +1,15 @@
+<div class="actions-container">
+  <sc-toolbar-finder style="width: 100%" placeHolder="Find feature..." (filter)="doFilter($event)">
+  </sc-toolbar-finder>
+  <div class="actions">
+    <sc-toolbar-add-btn tooltip="Add Feature" (click)="addFeaturePanel.toggle($event)"></sc-toolbar-add-btn>
+  </div>
+</div>
+<div >
+  <span class="trash-count">
+    <p-overlayPanel #addFeaturePanel showCloseIcon="true">
+ <!--     <sc-feature-creator *ngIf="addFeaturePanel.visible" (featureAdded)="addFeaturePanel.hide()">
+      </sc-feature-creator>-->
+    </p-overlayPanel>
+  </span>
+</div>

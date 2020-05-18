@@ -1,0 +1,27 @@
+.filter-input {
+  padding-right: 5px;
+}
+
+.filter-input input {
+  width: 100%;
+}
+
+.ui-inputgroup {
+  width: 100%;
+}
+
+:host ::ng-deep .filter-input.ui-inputgroup .ui-inputtext,
+:host ::ng-deep .filter-input.ui-inputgroup .ui-inputgroup-addon {
+  border: none;
+  border-bottom: solid 2px #8d9293;
+  border-radius: 0;
+  padding: 0;
+  height: 25px;
+  color: #313439;
+  font-size: 14px;
+  background: none;
+}
+
+:host ::ng-deep .filter-input.ui-inputgroup .ui-inputtext:focus {
+  box-shadow: none;
+}

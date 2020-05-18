@@ -1,0 +1,33 @@
+<div class="global-layout">
+
+  <div class="collapsible-container">
+
+    <div class="left" [class.collapse-left]="leftCollapsed">
+      <ng-content select="left-container"></ng-content>
+    </div>
+
+    <div class="left-toggle-button" [ngClass]="{'toggeled': leftCollapsed}">
+      <p-button icon="fa fa-angle-double-left" class="collapse-left-button" [ngClass]="{'toggeled': leftCollapsed}"
+        (click)="collapseLeft()"></p-button>
+    </div>
+
+  </div>
+
+  <div class="center">
+    <ng-content select="center-container" class="center-container"></ng-content>
+  </div>
+
+  <div class="collapsible-container">
+
+    <div class="right-toggle-button" [ngClass]="{'toggeled': rightCollapsed}">
+      <p-button [disabled]="ucPolicyActive" icon="fa fa-angle-double-right" class="collapse-right-button" [ngClass]="{'toggeled': rightCollapsed}"
+        (onClick)="collapseRight()"></p-button>
+    </div>
+
+    <div class="right" [class.collapse-right]="rightCollapsed">
+      <ng-content select="right-container"></ng-content>
+    </div>
+
+  </div>
+
+</div>

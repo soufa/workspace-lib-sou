@@ -1,0 +1,145 @@
+.no-match-found-msg {
+  margin: auto;
+  margin-top: -20px;
+  padding: 10px 85px;
+  position: absolute;
+  top: 50%;
+}
+
+:host ::ng-deep {
+  .ui-tree {
+    width: 100%;
+    border: none;
+    .ui-treenode-selectable.ui-treenode-content {
+      &:hover {
+        .node-actions {
+          .add-screen {
+            .ui-button {
+              color: #5cb85c;
+              transition-duration: 0s;
+            }
+          }
+          .remove-tree-node {
+            .ui-button {
+              color: #d84315;
+              transition-duration: 0s;
+            }
+          }
+          .clone-node {
+            .ui-button {
+              color: #2399e5;
+              transition-duration: 0s;
+            }
+          }
+          .duplicate-tree-node {
+            .ui-button {
+              color: #2399e5;
+              transition-duration: 0s;
+            }
+          }
+          .edit-feature {
+            .ui-button {
+              color: #2399e5;
+              transition-duration: 0s;
+            }
+          }
+          .preview-screen {
+            .ui-button {
+              color: #2399e5;
+              transition-duration: 0s;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ui-treenode-label {
+    width: calc(100% - 38px);
+  }
+  .ui-treenode-children {
+    .ui-treenode-label {
+      width: calc(100% - 24px);
+    }
+  }
+  .custom-node-label {
+    display: flex;
+    align-items: center;
+    height: 30px;
+  }
+  .custom-node-icon {
+    font-size: 12px;
+    margin-left: -10px;
+    margin-top: 2px;
+    margin-right: 2px;
+    .fa-unlink {
+      color: #d84315;
+    }
+  }
+  .node-updated {
+    .indecator {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #78909c;
+      margin-left: 2px;
+    }
+  }
+  .node-label {
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .node-actions {
+    margin-left: auto;
+    margin-right: 0;
+    .ui-button {
+      background: none;
+      border: none;
+      &:enabled {
+        &:hover {
+          background: none;
+          border: none;
+        }
+      }
+    }
+    .ui-button-icon-only {
+      width: 20px;
+    }
+    .edit-feature {
+      .ui-button {
+        color: #c6c6c6;
+      }
+    }
+    .preview-screen {
+      .ui-button {
+        color: #c6c6c6;
+      }
+    }
+    .remove-tree-node {
+      .ui-button {
+        color: #c6c6c6;
+      }
+    }
+    .clone-node {
+      .ui-button {
+        color: #c6c6c6;
+      }
+    }
+    .add-screen {
+      .ui-button {
+        color: #c6c6c6;
+      }
+    }
+  }
+  .ui-panel.ui-widget {
+    .ui-panel-titlebar {
+      padding: 0px 10px;
+      background: #e0e0e0;
+    }
+  }
+  .actions-container {
+    .ui-button-icon-only {
+      width: 1.5em;
+    }
+  }
+}

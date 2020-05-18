@@ -1,0 +1,31 @@
+<div class="cloner">
+  <div class="cloner-content">
+    Please provide a name to the new screen
+    <input
+      type="text"
+      pInputText
+      [(ngModel)]="screenName"
+      [ngClass]="{
+        'invalid-screen-name': inValidScreen() | async
+      }"
+      [pTooltip]="inValidScreen() | async"
+    />
+  </div>
+</div>
+<div class="buttons">
+  <p-button
+    (onClick)="apply()"
+    class="apply-button"
+    icon="fa fa-fw fa-check"
+    label="Apply"
+    [disabled]="inValidScreen() | async"
+  >
+  </p-button>
+  <p-button
+    (onClick)="cancel()"
+    class="cancel-button"
+    icon="fa fa-fw fa-times"
+    label="Cancel"
+  >
+  </p-button>
+</div>

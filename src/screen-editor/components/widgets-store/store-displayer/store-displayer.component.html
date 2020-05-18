@@ -1,0 +1,35 @@
+<div class="components-list">
+  <div *ngIf="mask" class="components-mask"></div>
+  <p-accordion
+    expandIcon="fa fa-fw fa-angle-right"
+    collapseIcon="fa fa-fw fa-angle-down"
+    *ngIf="categories && categories.length > 0; else displayError"
+  >
+    <div *ngFor="let category of categories; let i = index">
+      <p-accordionTab
+        [selected]="i === 0"
+        header="{{ category.name | titlecase }}"
+      >
+        <ul class="components">
+          <li
+            class="ui-component"
+            *ngFor="let component of category.components"
+            pDraggable
+            (onDragStart)="startDragComponent(component)"
+          >
+            <sc-widget [component]="component"></sc-widget>
+          </li>
+        </ul>
+      </p-accordionTab>
+    </div>
+  </p-accordion>
+</div>
+
+<ng-template #displayError>
+  <div *ngIf="store.error; else displayMessage" class="message">
+    {{ store.error }}
+  </div>
+</ng-template>
+<ng-template #displayMessage>
+  <div class="message">No component found to display</div>
+</ng-template>

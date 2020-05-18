@@ -1,0 +1,61 @@
+<!--<ng-container *ngIf="featuresTreeNodes$ | async as featuresTreeNodes; else loading">
+  <p-tree *ngIf="featuresTreeNodes.length > 0; else noFeatureFound" class="features-tree" [value]="featuresTreeNodes"
+    (onNodeExpand)="expandFeatureNode($event.node)" (onNodeCollapse)="collapseFeatureNode($event.node)"
+    selectionMode="single" [(selection)]="selectedNode">
+    <ng-template let-node pTemplate="feature">
+      <div class="custom-node-label">
+        <div class="node-label">
+          <span>{{ node.label }}</span>
+          <span class="node-count">({{ node.count }})</span>
+        </div>
+        <div *ngIf="node.updated" class="node-updated">
+          <div class="indecator"></div>
+        </div>
+        <div class="node-actions">
+          <p-button class="add-screen" (click)="openAddScreensDialog(node)" icon="fa fa-fw fa-plus"
+            pTooltip="Add Screen" tooltipPosition="bottom"></p-button>
+          <p-button class="remove-tree-node" (click)="deleteFeature(node)" icon="fa fa-fw fa-trash" pTooltip="Delete"
+            tooltipPosition="bottom"></p-button>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template let-node pTemplate="screen">
+      <div class="custom-node-label">
+        <span class="custom-node-icon">
+          <i class="fas fa-link" *ngIf="node.linked" pTooltip="Linked to {{node.linked}} model"
+            tooltipPosition="bottom"></i>
+          <i class="fas fa-unlink" *ngIf="!node.linked" pTooltip="Not linked to a model" tooltipPosition="bottom"></i>
+        </span>
+        <div class="node-label">
+          <span>{{ node.label }}</span>
+        </div>
+        <div *ngIf="node.updated" class="node-updated">
+          <div class="indecator"></div>
+        </div>
+        <sc-policy-state-indicator [screenContent]="node.data"></sc-policy-state-indicator>
+        <div class="node-actions">
+          <p-button class="clone-node" (click)="openCloneScreenDialo(node)" icon="fa fa-fw fa-copy" pTooltip="Clone"
+            tooltipPosition="bottom"></p-button>
+          <p-button class="edit-feature" (click)="editFeatureScreen(node)" icon="fa fa-fw fa-pen" pTooltip="Edit"
+            tooltipPosition="bottom"></p-button>
+          <p-button class="preview-screen" icon="fa fa-fw fa-eye" (click)="preview(node)" pTooltip="Preview"
+            tooltipPosition="bottom" showDelay="1000" hideDelay="500"></p-button>
+          <p-button class="remove-tree-node" (click)="deleteScreen(node)" icon="fa fa-fw fa-trash" pTooltip="Delete"
+            tooltipPosition="bottom"></p-button>
+        </div>
+      </div>
+    </ng-template>
+  </p-tree>
+  <ng-template #noFeatureFound>
+    <span class="no-match-found-msg">
+      No feature found
+    </span>
+  </ng-template>
+</ng-container>
+<ng-template #loading>
+  <span class="no-match-found-msg">
+    loading
+  </span>
+</ng-template>
+-->

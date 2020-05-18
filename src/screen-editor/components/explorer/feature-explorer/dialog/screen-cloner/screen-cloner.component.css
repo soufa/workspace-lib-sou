@@ -1,0 +1,21 @@
+:host .cloner {
+  height: 100px;
+}
+
+:host ::ng-deep .apply-button span {
+  background: #e4e4e4;
+  color: #5cb85c;
+}
+:host ::ng-deep .cancel-button span {
+  color: #d83431;
+}
+:host .cloner-content {
+  margin: 30px;
+}
+.buttons {
+  float: right;
+}
+.invalid-screen-name {
+  background: palevioletred;
+  border: 0px;
+}

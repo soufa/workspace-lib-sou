@@ -1,0 +1,85 @@
+<!--<div class="templates-group" *ngIf="templates$ | async as templates">
+  <span class="title">Screen types:</span>
+  <div class="ui-g-3" *ngFor="let template of templates">
+    <p-button [label]="screensCount$[template.template] | async" (click)="addScreen(template)"></p-button>
+  </div>
+</div>
+<span class="title">Feature screens:</span>
+<ng-container *ngIf="featureScreensState$ | async">
+  <div class="screens">
+    <p-table [value]="screens" [scrollable]="true" scrollHeight="200px">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Template</th>
+          <th>Definition</th>
+          <th style="width:65px;text-align: center">
+            <ng-container *ngIf="screensInTrashCount$ | async as screensInTrashCount">
+              <span *ngIf="screensInTrashCount > 0"><i
+                  class="fa fa-fw fa-trash"></i><sup>({{ screensInTrashCount }})</sup></span></ng-container>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-screen let-ri="rowIndex">
+        <tr>
+          <td pEditableColumn>
+            <p-cellEditor [ngClass]="{
+                    'invalid-screen-name': screen.errors
+                  }">
+              <ng-template pTemplate="input">
+                <input type="text" [ngModel]="screen.screenName" (blur)="screenNameChanges($event.target.value, ri)"
+                  (keydown.enter)="screenNameChanges($event.target.value, ri)" [pTooltip]="screen.errors" [ngClass]="{
+                    'invalid-screen-name': screen.errors
+                  }" />
+              </ng-template>
+              <ng-template pTemplate="output">
+                <span [pTooltip]="screen.errors" [ngClass]="{
+                    'invalid-screen-name': screen.errors
+                  }">
+                  {{ screen.screenName }} <i class="fas fa-pen edit-cell-icon"></i></span>
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>{{ screen.template.template }}</td>
+          <td pEditableColumn>
+
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <p-dropdown [options]="models$ | async"
+                  [(ngModel)]="screen.modelChanged ? screen.modelChangedValue : screen.modelName" filter="true"
+                  filterPlaceholder="Search model" placeholder="Select model" showClear="true"
+                  (onChange)="screenDefinitionChanges(screen.screenName,screen.savedName,$event.value)" appendTo="body"
+                  panelStyleClass="sc-ui-dropdown"></p-dropdown>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{screen.modelChanged ? screen.modelChangedValue : screen.modelName}} <i
+                  class="fas fa-pen edit-cell-icon"></i>
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td style="width: 65px;text-align: center;">
+            <p-button *ngIf="!screen.toBeDeleted" class="delete-button" icon="fa fa-fw fa-trash" pTooltip="Delete"
+              tooltipPosition="bottom" (click)="screenToDelete(screen)"></p-button>
+            <div class="actions" *ngIf="screen.toBeDeleted">
+              <p-button class="save-button" icon="fa fa-fw fa-check" pTooltip="Confirm" tooltipPosition="bottom"
+                (click)="confirmDeleteScreen(screen)"></p-button>
+              <p-button class="add-Feature" icon="fa fa-fw fa-close" pTooltip="Cancel" tooltipPosition="bottom"
+                (click)="cancelDeleteScreen(screen)"></p-button>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage" let-columns="columns">
+        <tr>
+          <td [attr.colspan]="columns?.length">
+            No screen configured
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="apply-button">
+    <p-button (onClick)="apply()" icon="fa fa-fw fa-check" label="Apply" [disabled]="disableApplyButton() | async">
+    </p-button>
+  </div>
+</ng-container>-->

@@ -1,0 +1,125 @@
+.global-layout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border: solid 1px #414a4b;
+    background: #ffffffff;
+}
+
+.center {
+    width: 100%;
+    overflow: hidden;
+    min-width: 430px;
+}
+
+.left,
+.right {
+    width: 315px;
+    display: flex;
+    overflow: hidden;
+    visibility: visible;
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -o-transition: width .5s;
+    transition: width .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.left {
+    border-right: solid 1px #c6c6c6;
+    box-sizing: content-box;
+}
+
+.right {
+    border-left: solid 1px #c6c6c6;
+}
+
+.collapse-left,
+.collapse-right {
+    width: 0;
+    visibility: hidden;
+}
+
+.collapsible-container {
+    display: flex;
+}
+
+.left-toggle-button,
+.right-toggle-button {
+    width: 25px;
+    height: 30px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.left-toggle-button {
+    margin-left: -25px;
+}
+
+.right-toggle-button {
+    margin-right: -25px;
+}
+
+.left-toggle-button.toggeled {
+    margin-left: 0px;
+}
+
+.right-toggle-button.toggeled {
+    margin-right: 0px;
+}
+
+/* new */
+
+:host ::ng-deep .collapse-right-button .ui-button,
+:host ::ng-deep .collapse-left-button .ui-button,
+:host ::ng-deep .collapse-left-button .ui-button:enabled:active,
+:host ::ng-deep .collapse-right-button .ui-button:enabled:active {
+    background: none;
+    border: none;
+    color: #313439;
+    width: 25px;
+    height: 30px;
+    transition: none;
+    font-size: 12px;
+}
+
+:host ::ng-deep .collapse-right-button .ui-button:enabled:hover,
+:host ::ng-deep .collapse-left-button .ui-button:enabled:hover {
+    color: #424242;
+    background: none;
+    border: none;
+}
+
+:host ::ng-deep .collapse-right-button.toggeled .ui-button,
+:host ::ng-deep .collapse-left-button.toggeled .ui-button {
+    color: #424242;
+}
+
+:host ::ng-deep .collapse-right-button .ui-button .ui-button-icon-left,
+:host ::ng-deep .collapse-left-button .ui-button .ui-button-icon-left {
+    font-size: 14px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: transform .5s;
+}
+
+:host ::ng-deep .collapse-right-button.toggeled .ui-button .ui-button-icon-left {
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    transition: transform .5s;
+}
+
+:host ::ng-deep .collapse-left-button.toggeled .ui-button .ui-button-icon-left {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: transform .5s;
+    color: #404a4b;
+}

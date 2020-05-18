@@ -1,0 +1,87 @@
+<global-layout>
+  <!-- Screens -->
+  <left-container class="left-container screen-container">
+    <p-panel class="screen-panel">
+      <p-header>
+        <div class="header-switcher">
+          <p-button label="Data Model" class="selected"> </p-button>
+        </div>
+      </p-header>
+      <sc-explorer></sc-explorer>
+    </p-panel>
+  </left-container>
+  <!-- Screens -->
+
+  <!-- Preview -->
+  <center-container class="center-container">
+    <p-panel class="preview-panel">
+      <p-header>
+        <div class="custom-header">
+          <div>
+            <span *ngIf="(displayDeviceSwitcher$ | async) === true"
+              >Configuration</span
+            >
+
+            <div
+              *ngIf="(displayUseCasePolicy$ | async) === true"
+              class="policy"
+            >
+              <p-button
+                icon="fa fa-fw fa-arrow-left"
+                class="back-button"
+                pTooltip="Back to preview"
+                tooltipPosition="bottom"
+                showDelay="1000"
+                hideDelay="500"
+                (onClick)="backToPreview()"
+              ></p-button>
+              <span>UseCase policy</span>
+            </div>
+          </div>
+          <div class="header-actions">
+
+          </div>
+        </div>
+      </p-header>
+      <sc-preview
+        [device]="selectedDevice"
+        [landscapeMode]="landscapeMode"
+        [ngClass]="{ hide: displayUseCasePolicy$ | async }"
+      ></sc-preview>
+    </p-panel>
+  </center-container>
+  <!-- Preview -->
+
+  <!-- Properties -->
+  <right-container class="right-container">
+    <div
+      class="components-container"
+      [class.collapse-container]="collapseComponents"
+    >
+      <sc-widgets-to-screen-switcher
+        [collapseProperties]="collapseProperties"
+        (collapse)="onCollapseComponents()"
+      >
+      </sc-widgets-to-screen-switcher>
+    </div>
+    <!--<div
+      class="proprties-container"
+      [class.collapse-container]="collapseProperties"
+    >
+      <p-panel
+        class="proprties-panel"
+        collapseIcon="fa fa-angle-down"
+        expandIcon="fa fa-angle-up"
+        [toggleable]="!collapseComponents"
+        (onBeforeToggle)="onCollapseProperties()"
+      >
+        <p-header>
+          <span>{{ propertiesTitle$ | async }} properties</span>
+        </p-header>
+        <sc-properties></sc-properties>
+      </p-panel>
+    </div>-->
+  </right-container>
+  <!-- Properties -->
+</global-layout>
+

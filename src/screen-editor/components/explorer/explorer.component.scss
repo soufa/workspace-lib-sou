@@ -1,0 +1,122 @@
+.no-feature-container {
+  display: flex;
+  align-items: center;
+  height: calc(100% - 30px);
+  flex-direction: column;
+  justify-content: center;
+  background: #f3f3f3;
+}
+
+.no-feature-container .no-data-message {
+  padding-bottom: 20px;
+}
+
+:host ::ng-deep {
+  .tree-container {
+    height: 100%;
+  }
+  .ui-tree-container {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    padding: 0.25em !important;
+    white-space: nowrap;
+  }
+  .ui-tree {
+    border: none !important;
+    width: 100% !important;
+    padding: 0px;
+    .ui-tree-container {
+      .ui-treenode {
+        padding: 0.125em 0 0 0 !important;
+        .ui-treenode-content {
+          padding: 0;
+          border: 0px solid transparent;
+          .ui-treenode-label {
+            padding: 0 2px;
+          }
+          .ui-treenode-label.ui-state-highlight {
+            background-color: inherit !important;
+            color: inherit !important;
+          }
+        }
+      }
+      padding: 0;
+    }
+    .ui-treenode-selectable.ui-treenode-content.ui-treenode-content-selected {
+      border-left: solid 4px #d83431 !important;
+      background-color: #eeeeee;
+      border-color: #d83431;
+      outline-width: 0px;
+    }
+    .ui-treenode-selectable.ui-treenode-content.ui-treenode-dragover {
+      border-left: solid 4px #d83431 !important;
+      background-color: #eeeeee;
+      border-color: #d83431;
+      outline-width: 0px;
+    }
+    .ui-tree-toggler {
+      font-size: 12px;
+    }
+    .pi {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+    .ui-tree-toggler.pi-caret-right {
+      &:before {
+        content: '\f054' !important;
+        font-size: 12px;
+      }
+    }
+    .ui-button-icon-only {
+      font-size: 14px;
+    }
+    .ui-tree-toggler.pi-caret-down {
+      &:before {
+        content: '\f078' !important;
+        font-size: 12px;
+      }
+    }
+    .ui-treenode-selectable.ui-treenode-content {
+      height: 30px;
+      background-color: #f9f9f9;
+      border-left: solid 4px #c6c6c6 !important;
+      &:hover {
+        background-color: #eeeeee;
+      }
+      &:active {
+        background-color: #eeeeee;
+        border-color: #d83431;
+        outline-width: 0px;
+      }
+      &:focus {
+        outline-width: 0px;
+      }
+    }
+    .ui-treenode-selectable {
+      &:active {
+        outline-width: 0px;
+      }
+    }
+    .ui-treenode-content.ui-treenode-selectable {
+      .ui-treenode-label {
+        &:not(.ui-state-highlight) {
+          &:hover {
+            border: none;
+            background: none;
+          }
+        }
+      }
+    }
+    .ui-treenode-label.ui-state-highlight {
+      border: none;
+      background: none;
+      color: #222222;
+    }
+  }
+  .screens-content {
+    .ui-tree {
+      border: none;
+    }
+  }
+}

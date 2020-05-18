@@ -1,0 +1,19 @@
+<!--<div class="preview-screen">
+  <div class="device" [ngClass]="device" [class.landscape]="landscapeMode">
+    <div class="app-frame">
+      <sc-previewer-loading></sc-previewer-loading>
+      <sc-status-bar *ngIf="device != 'desktop'"></sc-status-bar>
+      <ng-container *ngIf="previewerState$ | async as previewerState">
+        <iframe *ngIf="previewerState.initialized" class="viewer" #iframe cachedSrc="{{previewerState.routePath}}"
+          (load)="previewerFrameLoaded($event)" [style.min-width]="getDeskTopWitdth()"></iframe>
+        <div *ngIf="!previewerState.initialized && !previewerState.loading" class="viewer">
+          <p class="viewer-err-msg">
+            <i class="fa fa-exclamation-triangle"> </i>Previewer is not
+            installed or can not be loaded
+          </p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>-->
+<router-outlet></router-outlet>

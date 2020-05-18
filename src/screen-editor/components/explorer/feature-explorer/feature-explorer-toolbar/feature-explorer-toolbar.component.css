@@ -1,0 +1,27 @@
+.actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions-container .actions {
+  display: inline-flex;
+}
+
+.ui-inputgroup {
+  width: 100%;
+}
+.trash-screens-count-display,
+.trash-features-count-display {
+  border: 1px solid #d83431;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  display: inline-block;
+  top: 0px;
+}
+.trash-count {
+  display: block;
+  margin-top: 5px;
+}

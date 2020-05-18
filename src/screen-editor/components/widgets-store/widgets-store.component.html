@@ -1,0 +1,23 @@
+<!--<ng-container
+  *ngIf="widgetsLibrairies$ | async as widgetsLibrairies; else loading"
+>
+  <sc-store-selector
+    *ngIf="widgetsLibrairies && widgetsLibrairies.length > 1"
+    [stores]="widgetsLibrairies"
+    (selectStore)="selectStore($event)"
+  ></sc-store-selector>
+  <ng-container *ngIf="view$ | async as view">
+    <sc-store-displayer
+      [store]="selectedLibrary$ | async"
+      [screen]="screen$ | async"
+      [mask]="view !== 'screen' && view !== 'page'"
+    >
+    </sc-store-displayer>
+  </ng-container>
+</ng-container>
+<ng-template #loading>
+  <div>loading...</div>
+</ng-template>-->
+<div class="available-screens" >
+  <p-panelMenu [transitionOptions]="'0ms'" [model]="items"   [style]="{'width':'300px'}" [multiple]="false" ></p-panelMenu>
+</div>

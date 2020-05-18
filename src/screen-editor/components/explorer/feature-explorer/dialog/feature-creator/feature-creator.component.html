@@ -1,0 +1,12 @@
+<div class="feature-creator">
+  <form name="form" #frm="ngForm">
+    <label>Feature name:</label>
+    <div class="input-container">
+      <input type="text" pInputText [(ngModel)]="feature" required pattern="^[a-zA-Z][a-zA-Z_$0-9-]*$"
+        name="featureName" placeholder="eg. customer-management" #featureName="ngModel" />
+      <i class="fas fa-exclamation error-mark" *ngIf="frm.submitted && featureName.invalid" tooltipPosition="bottom"
+        [pTooltip]="featureName.errors.required ? 'Feature name is required' : 'Feature name should be in Kebab Case'"></i>
+      <button pButton type="submit" label="Add" class="add-button" (click)="submit(frm)"></button>
+    </div>
+  </form>
+</div>

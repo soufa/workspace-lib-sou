@@ -1,0 +1,21 @@
+:host ::ng-deep .components-panel .ui-panel .ui-panel-content{
+    border: 0px !important;
+}
+::ng-deep .ui-panelmenu .ui-widget {
+  background-color: #c6c6c6 !important;
+  font-family: 'lato';
+
+}
+::ng-deep .ui-panelmenu .ui-panelmenu-header .ui-menuitem-text	{
+  color: black;
+  font-family: 'lato';
+
+}
+::ng-deep  .ui-menu-list	 {
+  font-family: 'lato';
+
+}
+
+::ng-deep .ui-panelmenu .ui-panelmenu-header.ui-state-active, .ui-panelmenu .ui-panelmenu-header.ui-state-active a{
+  background-color: #d83431 !important;
+}

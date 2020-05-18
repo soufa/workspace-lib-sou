@@ -1,0 +1,19 @@
+.feature-creator {
+  .input-container {
+    display: flex;
+    align-items: center;
+    .error-mark {
+      color: #d84315;
+      padding: 0px 7px;
+      margin-right: -9px;
+    }
+    input.ng-touched.ng-invalid {
+      border-color: #d84315;
+    }
+    .add-button {
+      background-color: #4caf50;
+      color: #ffffff;
+      margin-left: 10px;
+    }
+  }
+}

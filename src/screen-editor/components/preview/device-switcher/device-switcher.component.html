@@ -1,0 +1,9 @@
+<div class="device-switcher">
+  <p-button *ngIf="currentDevice != 'desktop'" icon="fa fa-fw fa-undo" class="rotate-button" (click)="rotate()"></p-button>
+  <p-button icon="fa fa-fw fa-mobile" [class.selected]="currentDevice === 'phone'" (onClick)="selectDevice('phone')"
+    pTooltip="Mobile" tooltipPosition="bottom" showDelay="1000" hideDelay="500"></p-button>
+  <p-button icon="fa fa-fw fa-tablet" [class.selected]="currentDevice === 'tablet'" (onClick)="selectDevice('tablet')"
+    pTooltip="Tablet" tooltipPosition="bottom" showDelay="1000" hideDelay="500"></p-button>
+  <p-button icon="fa fa-fw fa-desktop" [class.selected]="currentDevice === 'desktop'" (onClick)="selectDevice('desktop')"
+    pTooltip="Desktop" tooltipPosition="bottom" showDelay="1000" hideDelay="500"></p-button>
+</div>

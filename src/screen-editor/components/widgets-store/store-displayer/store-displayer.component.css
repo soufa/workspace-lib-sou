@@ -1,0 +1,125 @@
+.components-list {
+  margin-top: -1px;
+  height: calc(100% - 24px);
+  position: relative;
+}
+
+.components {
+  display: flex;
+  padding-left: 0;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.ui-component:hover,
+.ui-component.selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+:host ::ng-deep .ui-component:hover .component-image {
+  transform: scale(1.1);
+}
+
+:host ::ng-deep .ui-component:hover .component-image svg {
+  fill: #00a2ff;
+}
+
+:host ::ng-deep .ui-component:hover .name {
+  color: #00a2ff;
+}
+
+.components li {
+  list-style: none;
+  max-width: 90px;
+  width: 86px;
+  height: 60px;
+  margin-right: 2px;
+  margin-left: 0;
+  position: relative;
+  padding: 10px;
+}
+
+.components-mask {
+  background: rgba(102, 102, 102, 0.2);
+  position: absolute;
+  width: 314px;
+  height: 100%;
+  z-index: 9;
+}
+
+.mask-message {
+  margin: 5px 39px;
+  text-align: center;
+  color: #212121;
+  font-size: 18px;
+  background: rgba(102, 102, 102, 0.5);
+  border-radius: 3px;
+}
+
+/* Override primeng p-accordion css*/
+:host ::ng-deep .ui-accordion .ui-accordion-header:hover,
+:host ::ng-deep .ui-accordion .ui-accordion-header:focus,
+:host ::ng-deep .ui-accordion .ui-accordion-header:active,
+:host ::ng-deep .ui-accordion .ui-accordion-header a:active,
+:host ::ng-deep .ui-accordion .ui-accordion-header a:focus {
+  border: 0;
+  border-top: 0px;
+  outline: none !important;
+}
+:host ::ng-deep .ui-accordion .ui-accordion-header {
+  background-color: #f9f9f9 !important;
+  border-radius: 0px;
+  margin: 0;
+  border: 0;
+  border-top: 0px;
+}
+
+:host ::ng-deep .ui-accordion .ui-accordion-header a {
+  text-decoration: none;
+  padding: 0.5em !important;
+  background-color: #f9f9f9 !important;
+  border-radius: 0px;
+  margin: 0;
+  border: 0;
+  border-top: 0px;
+}
+:host ::ng-deep .ui-accordion .ui-accordion-header a .ui-accordion-toggle-icon {
+  color: #1b1d1f;
+}
+:host
+  ::ng-deep
+  .ui-accordion
+  .ui-accordion-header:not(.ui-state-disabled).ui-state-active
+  a
+  .ui-accordion-toggle-icon {
+  color: #d83531 !important;
+}
+
+:host ::ng-deep .ui-accordion .ui-accordion-header.ui-state-active a:focus,
+:host ::ng-deep .ui-accordion .ui-accordion-header.ui-state-active a:active,
+:host ::ng-deep .ui-accordion .ui-accordion-header a:focus {
+  border: none;
+}
+:host ::ng-deep .ui-accordion .ui-accordion-header.ui-state-active a {
+  color: #d83531 !important;
+  font-weight: bold;
+  background-color: inherit !important;
+  border: 0px !important;
+  outline: none !important;
+}
+:host ::ng-deep a:active,
+:host ::ng-deep a:focus{
+  border: 0px !important;
+  outline: none !important;
+}
+:host ::ng-deep .ui-accordion .ui-accordion-content {
+  padding: 1em;
+  border-top: 0;
+  border: 0px;
+}
+
+.message {
+  text-align: center;
+  align-content: center;
+}

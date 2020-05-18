@@ -1,0 +1,10 @@
+<div class="previewer-loader-mask" *ngIf="loading$ | async">
+  <div class="loader">
+    <p-progressSpinner
+      [style]="{ width: '70px', height: '70px' }"
+      strokeWidth="6"
+      fill="transparent"
+      animationDuration=".5s"
+    ></p-progressSpinner>
+  </div>
+</div>

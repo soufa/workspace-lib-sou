@@ -1,0 +1,63 @@
+.screens-store {
+    height: 100%;
+}
+
+/* list box header */
+:host ::ng-deep .screens-store .ui-listbox.ui-widget {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+}
+
+:host ::ng-deep .screens-store .ui-listbox-header .ui-inputtext {
+    height: 25px;
+    border: none;
+    border-bottom: solid 2px #8d9293;
+    padding-left: 0;
+}
+
+:host ::ng-deep .screens-store .ui-listbox-header {
+    padding: 2px 8px 0px;
+    border: none;
+    background: #fff;
+}
+
+::ng-deep screens-store .no-element {
+    margin-top: 50%;
+    width: 100%;
+
+}
+
+:host ::ng-deep .screens-store .no-element .no-element-msg {
+    margin: -20px auto auto;
+    padding: 10px 61px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+
+}
+
+:host ::ng-deep .screens-store .ui-listbox-header .ui-listbox-filter-container .fa {
+    left: auto;
+    right: 0.25em;
+}
+
+/* list box items */
+:host ::ng-deep .screens-store .ui-listbox .ui-listbox-item {
+    margin-bottom: 2px;
+    height: auto;
+    background-color: #f9f9f9;
+    border-radius: 0;
+    padding: 2px 5px;
+}
+
+:host ::ng-deep .screens-store .ui-listbox .ui-listbox-item.ui-state-highlight,
+:host ::ng-deep .screens-store .ui-listbox .ui-listbox-item:not(.ui-state-highlight):hover {
+    background-color: #eeeeee;
+    color: #00a2ff;
+}
+
+:host ::ng-deep .feature-name {
+    font-size: 8pt;
+}

@@ -1,0 +1,25 @@
+<p-panel
+  class="components-panel"
+  expandIcon="fa fa-angle-down"
+  collapseIcon="fa fa-angle-up"
+  [toggleable]="!collapseProperties"
+  (onBeforeToggle)="collapseComponents()"
+>
+  <p-header>
+    <div class="header-switcher">
+      <p-button
+        label="Menu"
+        (onClick)="moveToComponents()"
+        [ngClass]="{ selected: switcherState === 'components' }"
+      >
+      </p-button>
+      <!-- <p-button label="Screens" (onClick)="moveToScreens()" [ngClass]="{selected: switcherState === 'screens'}">
+      </p-button> -->
+    </div>
+  </p-header>
+  <div>
+    <sc-widgets-store>
+    </sc-widgets-store>
+  </div>
+
+</p-panel>
